@@ -1,8 +1,6 @@
-main{
-    margin-left: 600px;
-    padding: 0;
-    display: flex;
+.card{
+    float: left;
 }
 img{
-    width: 30%;
+    width: 300px;
 }
