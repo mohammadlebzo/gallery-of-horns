@@ -17,6 +17,10 @@ class HornedBeasts extends React.Component {
         })
     };
 
+    test() {
+        this.props.show(this.props.title, this.props.image_url, this.props.description);
+    }
+
     render() {
         return (
             <div className="card">
@@ -30,7 +34,8 @@ class HornedBeasts extends React.Component {
                         <Card.Text>
                         Number of votes: {this.state.votes}
                         </Card.Text>
-                        <Button variant="primary" onClick={this.increaseVote}>vote</Button>
+                        <Button variant="primary" onClick={this.increaseVote}>Vote</Button>
+                        <Button variant="info" onClick={this.test.bind(this)}>Show Model</Button>
                     </Card.Body>
                 </Card>
             </div>
