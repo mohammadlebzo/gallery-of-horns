@@ -1,7 +1,6 @@
 import React from "react";
 import '../css-components/Main.css';
 import HornedBeasts from "./HornedBeasts";
-import data from "./assets/data.json";
 import SelectedBeast from "./SelectedBeast"
 
 class Main extends React.Component {
@@ -17,7 +16,7 @@ class Main extends React.Component {
     }
 
     handleClose = () => {
-        this.setState({showModel: false});
+        this.setState({ showModel: false });
     };
     show = (title, img, des) => {
         this.setState({
@@ -27,10 +26,10 @@ class Main extends React.Component {
             showModel: true
         });
     };
-    
+
 
     render() {
-        const list = data.map(item => {
+        const list = this.props.appData.map(item => {
             return (
                 <>
                     <HornedBeasts title={item.title} image_url={item.image_url} description={item.description} show={this.show.bind(this)} />
